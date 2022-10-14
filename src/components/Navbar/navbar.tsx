@@ -1,6 +1,7 @@
 import "./navbar.css";
 import logo from "../../assets/store.png";
 import NavLinks from "./navlinks";
+import { Link } from "react-router-dom";
 
 const options: string[] = [
   "All Categories",
@@ -30,27 +31,27 @@ const Navbar = () => {
             <ul>
               <li>
                 <a href="#text">
-                  <i className="fa fa-car"></i>Select Location
+                  <i className="fa fa-map-marker-alt"></i>Select Location
                 </a>
               </li>
               <li>
                 <a href="#text">
-                  <i className="fa fa-car"></i>Track Order
+                  <i className="fas fa-truck"></i>Track Order
                 </a>
               </li>
               <li>
                 <a href="#text">
-                  <i className="fa fa-car"></i>001 234 5678
+                  <i className="fa fa-phone"></i>001 234 5678
                 </a>
               </li>
               <li>
                 <a href="#text">
-                  <i className="fa fa-car"></i>Log In
+                  <i className="fas fa-sign-in-alt"></i>Log In
                 </a>
               </li>
               <li>
                 <a href="#text">
-                  <i className="fa fa-car"></i>Register
+                  <i className="fas fa-sign-out-alt"></i>Register
                 </a>
               </li>
             </ul>
@@ -83,7 +84,9 @@ const Navbar = () => {
         <div>
           <ul className="list">
             <li>
-              <a href="#home">Home</a>
+              <Link to="/" className="p-link">
+                <a href="#home">Home</a>
+              </Link>
             </li>
             <li id="electronics">
               <a href="#electronics">Electronics</a>
