@@ -56,7 +56,7 @@ const ProductDetail = () => {
               <h3 className="pr-name">{details?.carName}</h3>
               <div className="pr-price">
                 <span>{`₦${formatter
-                  .format(details?.marketplaceOldPrice)
+                  .format(details?.marketplacePrice)
                   .substring(1)}`}</span>
                 <del>{`₦${formatter
                   .format(details?.marketplaceOldPrice)
