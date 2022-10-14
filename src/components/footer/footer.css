@@ -1,0 +1,14 @@
+.footer {
+  background: rgb(6, 121, 201);
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ft-info {
+  text-decoration: underline;
+  color: red;
+}
