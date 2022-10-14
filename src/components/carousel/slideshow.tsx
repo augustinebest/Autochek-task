@@ -1,28 +1,75 @@
-import slider1 from "../../assets/carousel/slider1.jpg";
-import slider2 from "../../assets/carousel/slider2.jpg";
-import slider3 from "../../assets/carousel/slider3.jpg";
-import slider4 from "../../assets/carousel/slider4.jpg";
+import { Key } from "react";
 
-const Slider = () => {
+const Slider = ({ carMedia }: any) => {
   return (
     <section className="sh">
-      <div id="slideshow">
-        <div className="slide-wrapper">
-          <div className="slide">
-            <img src={slider1} alt="slideshow" />
-          </div>
+      <div className="sh-show">
+        <div className="sh-wrapper">
+          {carMedia && carMedia.carMediaList.length > 0 ? (
+            carMedia.carMediaList.map(
+              (
+                val: {
+                  type: any;
+                  url: string;
+                  name: string;
+                },
+                index: Key
+              ) => {
+                if (
+                  val.type === "image" ||
+                  val.type === "image/jpeg" ||
+                  val.type === "image/webp"
+                ) {
+                  return <img src={val.url} alt={val.name} key={index} />;
+                } else {
+                  return (
+                    <video controls key={index}>
+                      <source src={val.url} type="video/mp4" />
+                    </video>
+                  );
+                }
+              }
+            )
+          ) : (
+            <span>No Media</span>
+          )}
         </div>
       </div>
       <div className="sh-multiple">
-        <div>
-          <img src={slider2} alt="img" />
-        </div>
-        <div>
-          <img src={slider3} alt="img" />
-        </div>
-        <div>
-          <img src={slider4} alt="img" />
-        </div>
+        {carMedia && carMedia.carMediaList.length > 0 ? (
+          carMedia.carMediaList.map(
+            (
+              val: {
+                type: any;
+                url: string;
+                name: string;
+              },
+              index: Key
+            ) => {
+              if (
+                val.type === "image" ||
+                val.type === "image/jpeg" ||
+                val.type === "image/webp"
+              ) {
+                return (
+                  <div key={index}>
+                    <img src={val.url} alt={val.name} />
+                  </div>
+                );
+              } else {
+                return (
+                  <div>
+                    <video controls>
+                      <source src={val.url} type="video/mp4" />
+                    </video>
+                  </div>
+                );
+              }
+            }
+          )
+        ) : (
+          <div>No media file available</div>
+        )}
       </div>
     </section>
   );
