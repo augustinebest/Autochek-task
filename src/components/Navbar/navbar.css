@@ -1,0 +1,253 @@
+.nav-container-fluid {
+  background-color: rgb(9, 121, 201);
+  color: #fff;
+  padding: 14px 40px 14px 14px;
+  display: grid;
+  grid-template-columns: 35% 65%;
+}
+
+.nav-header-right p {
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.nav-header-right i {
+  margin-left: 12px;
+}
+
+.nav-header-left ul {
+  display: flex;
+}
+
+.nav-header-left ul li {
+  /* padding: 0px 30px; */
+  display: inline-block;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-weight: 600;
+  width: 19%;
+}
+
+.nav-header-left ul li:not(:last-child) {
+  border-right: 1px solid #dee2e6;
+}
+
+.nav-header-left ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.nav-header-left ul li a i {
+  padding-right: 12px;
+}
+
+.search-sect {
+  display: grid;
+  grid-template-columns: 26% auto 17%;
+  padding-top: 5px;
+}
+
+.display-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-sect .logo span {
+  font-style: italic;
+  color: #f45c5d;
+  font-size: 38px;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.search-sect .input {
+  width: 100%;
+}
+
+.search-sect .form {
+  width: 100%;
+  display: flex;
+  margin-top: 22px;
+}
+
+.search-sect .cart {
+  font-size: 20px;
+  color: #fff;
+  width: 50px;
+  height: 44px;
+  background: #000;
+  border: 1px solid rgba(27, 25, 25, 0.27);
+  cursor: pointer;
+  margin-top: 22px;
+}
+
+.search-sect .input input {
+  color: #191e21;
+  width: 70%;
+  letter-spacing: 1px;
+  padding: 10px;
+  border: 1px solid rgb(0 0 0 / 22%);
+  box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 22%);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.search-sect .input button {
+  margin-left: 8px;
+  border-radius: 0;
+  background: #f45c5d;
+  color: #fff;
+  width: 20%;
+  box-shadow: 0px 1px 2px 0px rgb(0 0 0 / 22%);
+  padding: 10px px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.navlinks {
+  display: grid;
+  grid-template-columns: 30% auto;
+  background-color: rgb(248, 249, 250);
+  padding: 10px 0;
+}
+
+.navlinks .dropdown {
+  position: relative;
+}
+
+.navlinks select {
+  outline: none;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  color: #000;
+  font-size: 14px;
+  background: transparent;
+  padding: 15px 10px;
+  width: 60%;
+  letter-spacing: 1px;
+  cursor: pointer;
+  margin: auto;
+}
+
+.navlinks option {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.navlinks .list {
+  display: flex;
+  margin-top: 12px;
+}
+
+.navlinks .list > li {
+  width: 11.5%;
+  text-align: center;
+}
+
+.navlinks .list li a {
+  color: rgba(0, 0, 0, 0.9);
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.navlink-list,
+.pages-link {
+  display: none;
+  position: absolute;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  list-style: none;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  z-index: 20;
+}
+
+.navlink-list {
+  min-width: 673px;
+  padding: 35px 25px;
+}
+
+.pages-link ul, .navlink-list ul {
+  padding: 0;
+}
+
+.pages-link ul li:nth-child(2),
+.pages-link ul li:nth-child(4) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  padding-bottom: 15px;
+}
+
+.pages-link ul li:nth-child(3),
+.pages-link ul li:nth-child(5) {
+  padding-top: 15px;
+}
+
+.pages-link ul li:nth-child(6) {
+  padding-bottom: 15px;
+}
+
+.navlinks .list li:hover .navlink-list,
+.navlinks .list li:hover .pages-link {
+  display: block;
+  transition: 0.7s;
+  animation: growDown 300ms ease-in-out;
+}
+
+#electronics {
+  margin-right: 10px;
+}
+
+.navlinks i {
+  margin-left: 8px;
+}
+
+.navlink-list h5 {
+  color: #0879c9;
+  letter-spacing: 1px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navlink-list ul {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.navlink-list ul li {
+  line-height: 2.5em;
+  letter-spacing: 1px;
+}
+
+.navlink-list ul li,
+.pages-link ul li {
+  font-size: 16px;
+  color: #545454;
+  font-weight: 600;
+}
+
+.pages-link ul li {
+  padding: 0.5rem 1.5rem;
+}
+
+
+@keyframes growDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
