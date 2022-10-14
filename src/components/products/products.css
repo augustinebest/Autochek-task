@@ -1,0 +1,169 @@
+.product > div:nth-child(1) {
+  color: #000;
+  font-size: 38px;
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 3px rgb(0 0 0 / 19%);
+  margin: 30px 0;
+  text-align: center;
+}
+
+.span-sect > span {
+  color: #0879c9;
+  font-size: 50px;
+  letter-spacing: 0;
+}
+
+.product > div:nth-child(2) {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 75% 25%;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+  grid-gap: 30px;
+}
+
+.product .brand {
+  box-shadow: 0px 0px 15px 0px #d6d6d6;
+  padding: 30px 30px;
+  margin-bottom: 30px;
+}
+
+.product .brand h3 {
+  color: #000;
+  font-size: 32px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 1px rgb(0 0 0 / 19%);
+  text-align: center;
+  font-style: italic;
+}
+
+.product .brand .items {
+  display: grid;
+  grid-template-columns: 31% 31% 31%;
+  grid-gap: 30px;
+  margin-top: 60px;
+  margin-top: 20px;
+}
+
+.product .brand .items > div {
+  /* border: 1px solid red; */
+  position: relative;
+}
+
+.brand-img {
+  width: 120px;
+  height: 200px;
+  margin: auto;
+  padding-bottom: 20px;
+  cursor: pointer;
+}
+
+.brand-img img {
+  vertical-align: middle;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.new-item {
+  left: 0;
+  background: #ff2978;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  font-size: 13px;
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.product .sidebar-sect {
+  background-color: #f9f9f9;
+  height: fit-content;
+}
+
+.br-name {
+  color: #000;
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+  font-weight: 600;
+}
+
+.br-prices {
+  display: flex;
+  justify-content: space-around;
+  margin: 12px 0;
+  padding: 0 40px;
+  align-items: center;
+}
+
+.br-price1 {
+  font-size: 18px;
+  color: #d60404;
+}
+
+.br-price2 {
+  font-weight: 300;
+  margin-left: 13px;
+  font-size: 15px;
+}
+
+.addToCart {
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  padding: 13px;
+  outline: none;
+  letter-spacing: 1px;
+  box-shadow: 0px 4px 8px 0px rgb(0 0 0 / 45%);
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  font-size: 13px;
+  color: #fff;
+  background: #0879c9;
+  text-decoration: none;
+  width: 80%;
+}
+
+.br-button {
+  text-align: center;
+}
+
+.quick-view {
+  position: absolute;
+  left: 26%;
+  background: #0879c9;
+  padding: 5px 13px;
+  outline: none;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: #fff;
+  opacity: 0.8;
+  font-weight: 600;
+  top: 25%;
+  display: none;
+}
+
+.brand-img:hover .quick-view {
+  display: block;
+  animation: view 300ms ease-in-out;
+}
+
+@keyframes view {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: 10%;
+  }
+  100% {
+    top: 25%;
+  }
+}
