@@ -1,6 +1,5 @@
 import Navbar from "../components/Navbar/navbar";
 import "./productDetail.css";
-import slider4 from "../assets/carousel/slider4.jpg";
 import Slider from "../components/carousel/slideshow";
 import Footer from "../components/footer/footer";
 import { Link } from "react-router-dom";
@@ -12,17 +11,19 @@ import { formatter } from "../utility/formatCurrency";
 const ProductDetail = () => {
   const location = useLocation();
   const [details, setDetails] = useState<any>();
+  const [carMedia, setCarMedia] = useState<any>();
   useEffect(() => {
     window.scrollTo(0, 0);
     const getApi = async () => {
-      const result = await Req.get(`/car/${location.state.id}`);
-      setDetails(result);
-      const getImages = await Req.get(`/car_media?carId=${location.state.id}`);
-      console.log("getImages", getImages);
+      const result = await Promise.all([
+        Req.get(`/car/${location.state.id}`),
+        Req.get(`/car_media?carId=${location.state.id}`),
+      ]);
+      setDetails(result[0]);
+      setCarMedia(result[1]);
     };
     getApi();
   }, [location]);
-  console.log("resultttt", details);
 
   return (
     <div>
@@ -49,7 +50,7 @@ const ProductDetail = () => {
       <section className="pr-details">
         <div>
           <div>
-            <Slider />
+            <Slider carMedia={carMedia} />
           </div>
           <div className="pr-descriptions">
             <div>
@@ -64,29 +65,66 @@ const ProductDetail = () => {
                 <span className="free">Free delivery</span>
               </div>
               <ul>
-                <li>Cash on Delivery Eligible.</li>
-                <li>Shipping Speed to Delivery.</li>
-                <li>EMIs from $655/month.</li>
                 <li>
-                  Bank OfferExtra 5% off* with Axis Bank Buzz Credit CardT&C
+                  <i className="fa fa-map-marker-alt"></i>
+                  <span>
+                    {details?.city}, {details?.state}, {details?.country}
+                  </span>
                 </li>
+                <li>Shipping Speed to Delivery.</li>
+                {details?.inspectorDetails && (
+                  <li>
+                    <i className="fa fa-phone"></i>
+                    Contact{" "}
+                    <span>
+                      {details?.inspectorDetails.inspectorFullName}
+                    </span>{" "}
+                    at <span>{details?.inspectorDetails.workshopName}</span> for
+                    inspection
+                  </li>
+                )}
               </ul>
             </div>
             <div className="warranty">
               <div className="pr-desc">
                 <i className="fa fa-hand-o-right hand"></i>{" "}
-                <span>1 YearManufacturer Warranty</span>
+                <span>Vehicle Description</span>
               </div>
-              <ul>
-                <li>3 GB RAM | 16 GB ROM | Expandable Upto 256 GB</li>
-                <li>5.5 inch Full HD Display</li>
-                <li>13MP Rear Camera | 8MP Front Camera</li>
-                <li>3300 mAh Battery</li>
-                <li>Exynos 7870 Octa Core 1.6GHz Processor</li>
-              </ul>
-              <div className="pr-desc">
-                <i className="fa fa-retweet hand"></i>{" "}
-                <span>Net banking & Credit/ Debit/ ATM card</span>
+              <div className="vehicle-description">
+                <div className="vehicle-desc">
+                  <div>
+                    <span>Engine Type</span>
+                    <span>{details?.engineType}</span>
+                  </div>
+                  <div>
+                    <span>Transmission</span>
+                    <span>{details?.transmission}</span>
+                  </div>
+                  <div>
+                    <span>Fuel Type</span>
+                    <span>{details?.fuelType}</span>
+                  </div>
+                  <div>
+                    <span>Interior color</span>
+                    <span>{details?.interiorColor}</span>
+                  </div>
+                  <div>
+                    <span>Exterior color</span>
+                    <span>{details?.exteriorColor}</span>
+                  </div>
+                  <div>
+                    <span>VIN</span>
+                    <span>{details?.vin}</span>
+                  </div>
+                  <div>
+                    <span>Selling condition</span>
+                    <span>{details?.sellingCondition}</span>
+                  </div>
+                  <div>
+                    <span>Vehicle ID</span>
+                    <span>{details?.id}</span>
+                  </div>
+                </div>
               </div>
               <div className="br-button">
                 <button className="addToCart">ADD TO CART</button>
