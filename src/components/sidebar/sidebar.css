@@ -1,0 +1,64 @@
+.sidebar-sect {
+  padding: 20px;
+}
+.sh-name {
+  color: #f45c5d;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sidebar-sect form {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.sidebar-sect input[type='text'] {
+  background: #fff;
+  border: none;
+  width: 78%;
+  outline: none;
+  padding: 11px 10px 10px 10px;
+  font-size: 13px;
+  color: #c4c4c4;
+}
+
+.sidebar-sect i {
+  font-size: 30px;
+  color: #fff;
+}
+
+.sidebar-sect button {
+  width: 44px;
+  height: 39px;
+  border: none;
+  padding: 0;
+  margin-top: 0;
+  cursor: pointer;
+  background: #0879c9;
+}
+
+.sidebar-sect ul {
+  padding: 0;
+}
+
+.mar-bot {
+  margin-bottom: 17px;
+}
+
+.sidebar-sect ul li {
+  font-size: 14px;
+    color: #000;
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+ }
+
+ .sidebar-sect input[type='checkbox'] {
+  margin-right: 12px;
+ }
+
+ .checklist li {
+  display: flex;
+  align-items: center;
+ }
