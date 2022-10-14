@@ -28,13 +28,13 @@ const Product = () => {
               {data?.result && data?.result.length > 0 ? (
                 data?.result.map((val, index) => (
                   <div key={index}>
-                    <div className="brand-img">
-                      {/* {val.new && <div className="new-item">New</div>} */}
-                      <img src={val.imageUrl} alt="brand" />
-                      <Link to={`/details/${val.id}`} state={{ id: val.id }}>
+                    <Link to={`/details/${val.id}`} state={{ id: val.id }}>
+                      <div className="brand-img">
+                        {/* {val.new && <div className="new-item">New</div>} */}
+                        <img src={val.imageUrl} alt="brand" />
                         <button className="quick-view">Quick view</button>
-                      </Link>
-                    </div>
+                      </div>
+                    </Link>
                     <hr />
                     <div className="br-name">{val.title}</div>
                     <div className="br-prices">
@@ -59,33 +59,6 @@ const Product = () => {
               )}
             </div>
           </div>
-          {/* <div className="brand">
-            <h3>New Brand Mobiles</h3>
-            <div className="items">
-              {items.length > 0 ? (
-                items.map((val, index) => (
-                  <div key={index}>
-                    <div className="brand-img">
-                      {val.new && <div className="new-item">New</div>}
-                      <img src={slider4} alt="brand" />
-                      <button className="quick-view">Quick view</button>
-                    </div>
-                    <hr />
-                    <div className="br-name">{val.name}</div>
-                    <div className="br-prices">
-                      <span className="br-price1">{val.price1}</span>
-                      <del className="br-price2">{val.price2}</del>
-                    </div>
-                    <div className="br-button">
-                      <button className="addToCart">ADD TO CART</button>
-                    </div>
-                  </div>
-                ))
-              ) : (
-                <div>loading...</div>
-              )}
-            </div>
-          </div> */}
         </div>
         <div className="sidebar-sect">
           <Sidebar />
