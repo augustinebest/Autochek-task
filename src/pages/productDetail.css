@@ -1,0 +1,155 @@
+.pr-background {
+  min-height: 300px;
+  width: 100%;
+}
+
+.pr-background img {
+  object-fit: cover;
+  width: 100%;
+  height: 300px;
+}
+
+.pr-container {
+  background-color: rgb(238, 238, 238);
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+
+.pr-container ul {
+  padding: 0;
+  display: flex;
+  width: 80%;
+  margin: auto;
+}
+
+.pr-container ul li {
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.p-link {
+  text-decoration: none;
+  color: #f45c5d;
+}
+
+.pr-container ul li:nth-child(1) {
+  color: #f45c5d;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.pr-container ul li:nth-child(1) span {
+  margin: 0 15px;
+  color: #000;
+}
+
+.pr-details > div {
+  /* border: 1px solid red; */
+  width: 75%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 45% 55%;
+  grid-gap: 30px;
+  margin-bottom: 40px;
+}
+
+.pr-descriptions > div:nth-child(1) {
+  border-bottom: 1px solid rgb(6, 121, 201);
+  margin-bottom: 30px;
+}
+
+.pr-descriptions ul {
+  padding: 0;
+}
+
+.pr-descriptions ul li {
+  line-height: 35px;
+}
+
+.pr-name {
+  font-size: 25px;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.pr-price > span:nth-child(1) {
+  font-size: 18px;
+  color: #d60404;
+}
+
+.pr-price > del {
+  margin: 0 20px;
+  opacity: 0.7;
+}
+
+.pr-price .free {
+  font-weight: 500;
+}
+
+.pr-price {
+  margin-bottom: 20px;
+}
+
+.pr-desc {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
+.pr-desc i {
+  color: rgb(6, 121, 201);
+  margin-right: 10px;
+  font-size: 30px;
+}
+
+.warranty ul {
+  list-style-type: disc;
+  padding-left: 15px;
+  margin: 12px 0;
+}
+
+.warranty .br-button {
+  margin-top: 25px;
+  text-align: none;
+}
+
+.warranty .br-button button {
+  width: 40%;
+  font-weight: 600;
+}
+
+/* Slideshow */
+.sh .slide {
+  margin: auto;
+  width: 350px;
+  height: 400px;
+}
+
+.sh .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.sh-multiple {
+  /* border: 1px solid red; */
+  display: grid;
+  grid-template-columns: 32% 32% 32%;
+  grid-gap: 10px;
+  margin-top: 12px;
+}
+
+.sh-multiple div {
+  height: 150px;
+  width: 100%;
+  position: relative;
+}
+
+.sh-multiple div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
